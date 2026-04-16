@@ -9,7 +9,6 @@ public class Cancion {
     private int reproducciones;
     private LocalDateTime ultimaReproduccion;
 
-
     public Cancion(String nombre, Album album, Popularidad popularidad, int likes, int dislikes, int reproducciones) {
         this.nombre = nombre;
         this.album = album;

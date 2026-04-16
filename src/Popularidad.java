@@ -1,7 +1,7 @@
 public abstract class Popularidad {
 
     public String detalleCompletoPara(Cancion c) {
-        return icono() + " - " + leyenda(c); // Formato: icono - leyenda [cite: 4]
+        return icono() + " - " + leyenda(c);
     }
 
     protected abstract String icono();

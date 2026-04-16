@@ -11,9 +11,8 @@ public class Normal extends Popularidad {
 
     @Override
     public void chequearPopularidadPara(Cancion c) {
-        if (c.getReproducciones() > 1000) {
-            c.setPopularidad(new EnAuge());
+        if (c.getReproducciones() > 1000) { //falta sacar el hardcodeo
+            c.cambiarPopularidad(new EnAuge());
         }
     }
-
 }
