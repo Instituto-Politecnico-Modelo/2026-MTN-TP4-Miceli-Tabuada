@@ -1,11 +1,9 @@
-import java.time.LocalDate;
-
 public class Album {
     private String nombre;
     private Artista artista;
-    private LocalDate anioLanzamiento;
+    private int anioLanzamiento;
 
-    public Album(String nombre, Artista artista, LocalDate anioLanzamiento) {
+    public Album(String nombre, Artista artista, int anioLanzamiento) {
         this.nombre = nombre;
         this.artista = artista;
         this.anioLanzamiento = anioLanzamiento;
@@ -15,23 +13,23 @@ public class Album {
         return nombre;
     }
 
-    public Artista getArtista() {
-        return artista;
-    }
-
     public void setNombre(String nombre) {
         this.nombre = nombre;
+    }
+
+    public Artista getArtista() {
+        return artista;
     }
 
     public void setArtista(Artista artista) {
         this.artista = artista;
     }
 
-    public LocalDate getAnioLanzamiento() {
+    public int getAnioLanzamiento() {
         return anioLanzamiento;
     }
 
-    public void setAnioLanzamiento(LocalDate anioLanzamiento) {
+    public void setAnioLanzamiento(int anioLanzamiento) {
         this.anioLanzamiento = anioLanzamiento;
     }
 }
