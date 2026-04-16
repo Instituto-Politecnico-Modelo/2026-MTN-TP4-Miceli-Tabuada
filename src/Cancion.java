@@ -22,7 +22,7 @@ public class Cancion {
     public Cancion(String nombre, Album album) {
         this.nombre = nombre;
         this.album = album;
-        this.popularidad = new Normal();
+        this.popularidad = new Normal(); //arranca en normal TODA cancion
         this.likes = 0;
         this.dislikes = 0;
         this.reproducciones = 0;
