@@ -9,13 +9,23 @@ public class Cancion {
     private int reproducciones;
     private LocalDateTime ultimaReproduccion;
 
-    public Cancion(String nombre, Album album, Popularidad popularidad, int likes, int dislikes, int reproducciones) {
+    public Cancion(String nombre, Album album, Popularidad popularidad, int likes, int dislikes, int reproducciones, LocalDateTime ultimaReproduccion) {
         this.nombre = nombre;
         this.album = album;
         this.popularidad = popularidad;
         this.likes = likes;
         this.dislikes = dislikes;
         this.reproducciones = reproducciones;
+        this.ultimaReproduccion = ultimaReproduccion;
+    }
+
+    public Cancion(String nombre, Album album) {
+        this.nombre = nombre;
+        this.album = album;
+        this.popularidad = new Normal();
+        this.likes = 0;
+        this.dislikes = 0;
+        this.reproducciones = 0;
     }
     public String getNombre() {
         return nombre;
