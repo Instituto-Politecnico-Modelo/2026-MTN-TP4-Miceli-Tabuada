@@ -9,9 +9,11 @@ public class Normal extends Popularidad {
         return c.getAlbum().getArtista().getNombre() + " - " + c.getAlbum().getNombre() + " - " + c.getNombre();
     }
 
+    private static int REPRODUCCIONES_MINIMAS_ENAUGE = 1000;
+
     @Override
     public void chequearPopularidadPara(Cancion c) {
-        if (c.getReproducciones() > 1000) { //falta sacar el hardcodeo
+        if (c.getReproducciones() > REPRODUCCIONES_MINIMAS_ENAUGE) {
             c.cambiarPopularidad(new EnAuge());
         }
     }
