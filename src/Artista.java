@@ -9,7 +9,4 @@ public class Artista {
         return nombre;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
 }

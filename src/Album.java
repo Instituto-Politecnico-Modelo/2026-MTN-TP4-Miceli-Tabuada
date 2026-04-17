@@ -13,23 +13,12 @@ public class Album {
         return nombre;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
     public Artista getArtista() {
         return artista;
-    }
-
-    public void setArtista(Artista artista) {
-        this.artista = artista;
     }
 
     public int getAnioLanzamiento() {
         return anioLanzamiento;
     }
 
-    public void setAnioLanzamiento(int anioLanzamiento) {
-        this.anioLanzamiento = anioLanzamiento;
-    }
 }

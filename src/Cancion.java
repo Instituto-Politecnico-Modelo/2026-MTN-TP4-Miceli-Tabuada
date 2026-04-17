@@ -9,16 +9,6 @@ public class Cancion {
     private int reproducciones;
     private LocalDateTime ultimaReproduccion;
 
-    public Cancion(String nombre, Album album, Popularidad popularidad, int likes, int dislikes, int reproducciones, LocalDateTime ultimaReproduccion) {
-        this.nombre = nombre;
-        this.album = album;
-        this.popularidad = popularidad;
-        this.likes = likes;
-        this.dislikes = dislikes;
-        this.reproducciones = reproducciones;
-        this.ultimaReproduccion = ultimaReproduccion;
-    }
-
     public Cancion(String nombre, Album album) {
         this.nombre = nombre;
         this.album = album;
@@ -30,20 +20,8 @@ public class Cancion {
     public String getNombre() {
         return nombre;
     }
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
     public Album getAlbum() {
         return album;
-    }
-    public void setAlbum(Album album) {
-        this.album = album;
-    }
-    public Popularidad getPopularidad() {
-        return popularidad;
-    }
-    public void setPopularidad(Popularidad popularidad) {
-        this.popularidad = popularidad;
     }
     public int getLikes() {
         return likes;
@@ -78,7 +56,6 @@ public class Cancion {
     public String detalleCompleto() {
         return this.popularidad.detalleCompletoPara(this);
     }
-
     public void cambiarPopularidad(Popularidad p) {
         this.popularidad = p;
     }
