@@ -3,7 +3,6 @@ import java.time.temporal.ChronoUnit;
 
 public class Tendencia extends Popularidad{
     private static final long HORAS_MAXIMAS_SIN_REPRODUCCION = 24;
-
     @Override
     protected String icono() {
         return Icono.FIRE.texto();

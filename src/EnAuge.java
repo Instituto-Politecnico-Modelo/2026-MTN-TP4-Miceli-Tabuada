@@ -5,6 +5,13 @@ public class EnAuge extends Popularidad{
     private int reproduccionesEnEsteMomento;
     private int likesEnEsteMomento;
     private int dislikesEnEsteMomento;
+
+    public EnAuge() {
+        this.reproduccionesEnEsteMomento = 0;
+        this.likesEnEsteMomento = 0;
+        this.dislikesEnEsteMomento =0;
+    }
+
     @Override
     protected String icono() {
         return Icono.ROCKET.texto();
@@ -19,9 +26,9 @@ public class EnAuge extends Popularidad{
     public void chequearPopularidadPara(Cancion c) {
         this.reproduccionesEnEsteMomento++;
         //aca deberia haber una funcion de dar like y dislike, pero el profe no contempla esto
-        if (this.reproduccionesEnEsteMomento > REPRODUCCIONES_MINIMAS_TENDENCIA && c.getLikes() > LIKES_MINIMOS_TENDENCIA) {
+        if (this.reproduccionesEnEsteMomento > REPRODUCCIONES_MINIMAS_TENDENCIA && this.likesEnEsteMomento > LIKES_MINIMOS_TENDENCIA) {
             c.cambiarPopularidad(new Tendencia());
-        } else if (c.getDislikes() >= DISLIKES_MAXIMOS_NORMAL) {
+        } else if (this.dislikesEnEsteMomento >= DISLIKES_MAXIMOS_NORMAL) {
             c.cambiarPopularidad(new Normal());
         }
     }
