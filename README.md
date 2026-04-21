@@ -49,7 +49,7 @@ System.out.println(cancion.detalleCompleto());
 
 ## 📝 Autor
 
-**Francisco Miceli**
+**Francisco Miceli & Lorenzo Tabuada**
 
 ### 🎓 Detalles
 
