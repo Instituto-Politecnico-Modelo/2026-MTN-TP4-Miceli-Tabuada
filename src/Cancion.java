@@ -50,8 +50,8 @@ public class Cancion {
 
     public void reproducir() {
         this.reproducciones++;
-        this.ultimaReproduccion = LocalDateTime.now();
         this.popularidad.chequearPopularidadPara(this);
+        this.ultimaReproduccion = LocalDateTime.now();
     }
     public String detalleCompleto() {
         return this.popularidad.detalleCompletoPara(this);
