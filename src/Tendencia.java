@@ -2,6 +2,7 @@ import java.time.LocalDateTime;
 import java.time.temporal.ChronoUnit;
 
 public class Tendencia extends Popularidad{
+    private static final long HORAS_MAXIMAS_SIN_REPRODUCCION = 24;
 
     @Override
     protected String icono() {
@@ -13,7 +14,6 @@ public class Tendencia extends Popularidad{
         return c.getNombre() + " - " + c.getAlbum().getArtista().getNombre() + " (" + c.getAlbum().getNombre() + " - " + c.getAlbum().getAnioLanzamiento() +")";
     }
 
-    private static final long HORAS_MAXIMAS_SIN_REPRODUCCION = 24;
     @Override
     public void chequearPopularidadPara(Cancion c) {
         long horasDesdeUltimaVez = ChronoUnit.HOURS.between(c.getUltimaReproduccion(), LocalDateTime.now());

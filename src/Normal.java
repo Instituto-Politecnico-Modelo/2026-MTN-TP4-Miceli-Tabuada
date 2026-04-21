@@ -1,4 +1,6 @@
 public class Normal extends Popularidad {
+    private static int REPRODUCCIONES_MINIMAS_ENAUGE = 1000;
+
     @Override
     protected String icono() {
         return Icono.MUSICAL_NOTE.texto();
@@ -8,8 +10,6 @@ public class Normal extends Popularidad {
     protected String leyenda(Cancion c) {
         return c.getAlbum().getArtista().getNombre() + " - " + c.getAlbum().getNombre() + " - " + c.getNombre();
     }
-
-    private static int REPRODUCCIONES_MINIMAS_ENAUGE = 1000;
 
     @Override
     public void chequearPopularidadPara(Cancion c) {
