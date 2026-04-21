@@ -1,5 +1,6 @@
 public class Normal extends Popularidad {
     private static int REPRODUCCIONES_MINIMAS_ENAUGE = 1000;
+    private int reproduccionesEnEsteMomento;
 
     @Override
     protected String icono() {
@@ -13,7 +14,8 @@ public class Normal extends Popularidad {
 
     @Override
     public void chequearPopularidadPara(Cancion c) {
-        if (c.getReproducciones() > REPRODUCCIONES_MINIMAS_ENAUGE) {
+        this.reproduccionesEnEsteMomento++;
+        if (this.reproduccionesEnEsteMomento > REPRODUCCIONES_MINIMAS_ENAUGE) {
             c.cambiarPopularidad(new EnAuge());
         }
     }
